@@ -2,7 +2,7 @@
 	member skin css
 */
 
-.access{margin-top: 50px}
+.access{}
 .access .panel-footer{overflow:hidden;}
 .search form{padding:20px;}
 .search textarea {padding: 15px;background: #f7f7f7;font-size: 12px;}

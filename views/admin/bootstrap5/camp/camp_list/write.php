@@ -6,14 +6,14 @@
         echo form_open_multipart(current_full_url(), $attributes);
         ?>
         <input type="hidden" name="<?php echo element('primary_key', $view); ?>" value="<?php echo element(element('primary_key', $view), element('data', $view)); ?>" />
+        <input type="hidden" name="ch_etc_pro" id="ch_etc_pro_hidden" value="" />
 
         <div class="form-group mb-3 row">
-            <label class="col-sm-2 col-form-label">캠프명</label>
+            <label class="col-sm-2 col-form-label">캠프명1</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="ch_num" value="<?php echo set_value('ch_num', element('ch_num', element('data', $view))); ?>" />
             </div>
         </div>
-
 
         <div class="form-group mb-3 row">
             <label class="col-sm-2 col-form-label">년도</label>
@@ -52,8 +52,6 @@
                     <option value="서울" <?php echo set_select('ch_location', '서울', (element('ch_location', element('data', $view)) === '서울' ? true : false)); ?>>서울</option>
                     <option value="호남" <?php echo set_select('ch_location', '호남', (element('ch_location', element('data', $view)) === '호남' ? true : false)); ?>>호남</option>
                     <option value="영남" <?php echo set_select('ch_location', '영남', (element('ch_location', element('data', $view)) === '영남' ? true : false)); ?>>영남</option>
-
-
                 </select>
             </div>
         </div>
@@ -99,7 +97,7 @@
         <div class="form-group mb-3 row">
             <label class="col-sm-2 col-form-label">일정표</label>
             <div class="col-sm-10">
-                <textarea class="form-control" name="ch_schedule" rows="5"><?php echo set_value('ch_schedule', element('ch_schedule', element('data', $view))); ?></textarea>
+                <textarea class="form-control" name="ch_schedule_text" rows="5"><?php echo set_value('ch_schedule_text', element('ch_schedule', element('data', $view))); ?></textarea>
             </div>
         </div>
 
@@ -113,17 +111,13 @@
             </div>
         </div>
 
-
-
-
-
         <div class="form-group mb-3 row">
             <label class="col-sm-2 col-form-label">첨부파일</label>
             <div class="col-sm-10">
                 <input type="file" class="form-control" name="ch_file" />
                 <?php if(element('ch_file', element('data', $view))) { ?>
                     <div class="mt-2">
-                        <a href="<?php echo base_url('uploads/camp/'.element('ch_file', element('data', $view))); ?>" class="btn btn-outline-primary " download>
+                        <a href="<?php echo base_url('uploads/camp/'.element('ch_file', element('data', $view))); ?>" class="btn btn-outline-primary" download>
                             <i class="fas fa-download"></i> 첨부파일 다운로드
                         </a>
                     </div>
@@ -137,7 +131,7 @@
                 <input type="file" class="form-control" name="ch_schedule" accept="image/*" />
                 <?php if(element('ch_schedule', element('data', $view))) { ?>
                     <div class="mt-2">
-                        <a href="<?php echo base_url('uploads/camp/'.element('ch_schedule', element('data', $view))); ?>" class="btn btn-outline-primary " download>
+                        <a href="<?php echo base_url('uploads/camp/'.element('ch_schedule', element('data', $view))); ?>" class="btn btn-outline-primary" download>
                             <i class="fas fa-download"></i> 시간표 다운로드
                         </a>
                     </div>
@@ -155,7 +149,7 @@
         <div class="form-group mb-3 row">
             <label class="col-sm-2 col-form-label">프로그램 소개</label>
             <div class="col-sm-10">
-                <textarea class="form-control" name="ch_etc_pro" rows="5"><?php echo set_value('ch_etc_pro', element('ch_etc_pro', element('data', $view))); ?></textarea>
+                <div id="editorjs" style="border: 1px solid #dee2e6; border-radius: 0.25rem; min-height: 300px;"></div>
             </div>
         </div>
 
@@ -173,17 +167,79 @@
             </div>
         </div>
 
-
         <div class="btn-group float-end" role="group">
-            <button type="button" class="btn btn-secondary" onClick="document.location.href='<?php echo admin_url($this->pagedir); ?>';">취소하기</button>
+            <button type="button" class="btn btn-secondary" onClick="document.location.href='<?php echo admin_url($this->campdir); ?>';">취소하기</button>
             <button type="submit" class="btn btn-success">저장하기</button>
         </div>
         <?php echo form_close(); ?>
     </div>
 </div>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest/dist/editor.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
+
 <script>
     $(function() {
+        // Editor.js 초기화
+        var initialData = <?php echo !empty(element('ch_etc_pro_json', element('data', $view))) ? element('ch_etc_pro_json', element('data', $view)) : 'null'; ?>;
+
+        const editor = new EditorJS({
+            holder: 'editorjs',
+            tools: {
+                header: {
+                    class: Header,
+                    config: {
+                        placeholder: '제목을 입력하세요',
+                        levels: [2, 3, 4],
+                        defaultLevel: 2
+                    }
+                },
+                list: {
+                    class: List,
+                    inlineToolbar: true,
+                    config: {
+                        defaultStyle: 'unordered'
+                    }
+                },
+                quote: {
+                    class: Quote,
+                    inlineToolbar: true,
+                    config: {
+                        quotePlaceholder: '인용문을 입력하세요',
+                        captionPlaceholder: '출처'
+                    }
+                },
+                delimiter: Delimiter,
+                table: {
+                    class: Table,
+                    inlineToolbar: true
+                }
+            },
+            data: initialData || {},
+            placeholder: '프로그램 소개 내용을 입력하세요...',
+            minHeight: 300
+        });
+
+        // 폼 제출 시 Editor.js 데이터 저장
+        $('#fadminwrite').on('submit', function(e) {
+            e.preventDefault();
+
+            editor.save().then((outputData) => {
+                $('#ch_etc_pro_hidden').val(JSON.stringify(outputData));
+                this.submit();
+            }).catch((error) => {
+                console.error('에디터 저장 실패:', error);
+                alert('내용 저장에 실패했습니다.');
+            });
+        });
+
+        // 기존 validation
         $('#fadminwrite').validate({
             rules: {
                 ch_num: { required: true },
@@ -218,6 +274,9 @@
                     number: '숫자만 입력 가능합니다',
                     min: '1명 이상 입력해주세요'
                 }
+            },
+            submitHandler: function(form) {
+                return false;
             }
         });
     });

@@ -1,5 +1,5 @@
 <?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
-
+<h3>회원가입</h3>
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">

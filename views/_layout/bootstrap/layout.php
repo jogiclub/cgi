@@ -25,10 +25,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 
     <?php $version = date("YmdHis", time()); ?>
-    <link rel="stylesheet" type="text/css"
-          href="<?php echo element('layout_skin_url', $layout); ?>/css/style.css?<?php echo $version; ?>"/>
-    <link rel="stylesheet" type="text/css"
-          href="<?php echo element('layout_skin_url', $layout); ?>/css/main.css?<?php echo $version; ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo element('layout_skin_url', $layout); ?>/css/style.css?<?php echo $version; ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo element('layout_skin_url', $layout); ?>/css/main.css?<?php echo $version; ?>"/>
 
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..700&display=swap" rel="stylesheet">
@@ -87,20 +85,31 @@
 </head>
 <body <?php echo isset($view) ? element('body_script', $view) : ''; ?>>
 
-<?php if (element('view_skin_path', $layout) !== 'main/bootstrap') {
-    if (element('doc_key', $view)) {
-        $sub = 'subpage subpage-' . element('doc_key', $view);
-    } else if (element('board_key', $view)) {
-        $sub = 'subpage subpage-' . element('board_key', $view);
-    } else {
-        $sub = 'subpage';
-    }
+<?php
+if (element('doc_key', $view)) {
+    $sub = 'subpage subpage-' . element('doc_key', $view);
+} else if (element('board_key', $view)) {
+    $sub = 'subpage subpage-' . element('board_key', $view);
+} else if ($this->uri->segment(1) === 'login') {
+    $sub = 'subpage subpage-login';
+} else if ($this->uri->segment(1) === 'register') {
+    $sub = 'subpage subpage-register';
+} else if ($this->uri->segment(1) === 'mypage') {
+    $sub = 'subpage subpage-mypage';
+} else if ($this->uri->segment(1) === 'membermodify') {
+    $sub = 'subpage subpage-membermodify';
+} else if ($this->uri->segment(1) === 'camp') {
+    $sub = 'subpage subpage-camp';
+} else {
+    $sub = 'mainpage';
 }
 ?>
 
 
 <div class="wrapper">
-    <header class="header <?php echo $sub; ?>">
+
+    <header class="header <?php echo $sub; ?>" style="background:url('../assets/images/2026_winter/main_0<?php echo rand(1, 9); ?>.jpg') center center/cover ">
+        <div class="back-drop opacity-50" style="background: linear-gradient(to left, #000, #000); position: absolute; left: 0; width: 100%;top: 0; height: 530px;"></div>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <h1>
@@ -203,6 +212,9 @@
             </div>
         </nav>
     </header>
+
+
+
 
     <div class="main <?php echo $sub; ?>">
 

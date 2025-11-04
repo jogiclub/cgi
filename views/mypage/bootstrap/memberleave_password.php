@@ -1,5 +1,5 @@
 <?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
-
+<h3>회원 비밀번호 확인</h4>
 <div class="mypage">
 	<ul class="nav nav-tabs">
 		<li><a href="<?php echo site_url('mypage'); ?>" title="마이페이지">마이페이지</a></li>

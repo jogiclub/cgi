@@ -112,6 +112,9 @@ class Camp_list extends CB_Controller  // PHP 예약어 'List' 피하기 위해 
     /**
      * 캠프 등록/수정
      */
+    /**
+     * 캠프 등록/수정
+     */
     public function write($pid = 0)
     {
         $eventname = 'event_admin_camp_write';
@@ -130,18 +133,15 @@ class Camp_list extends CB_Controller  // PHP 예약어 'List' 피하기 위해 
         $primary_key = $this->{$this->modelname}->primary_key;
         $getdata = array();
         if ($pid) {
-            // get_one 메소드가 없다면 아래 메소드를 Camp_model에 추가해야 합니다
             $getdata = $this->camp_model->get_one($pid);
+            // Editor.js JSON 데이터 디코딩
+            if (!empty($getdata['ch_etc_pro'])) {
+                $getdata['ch_etc_pro_json'] = $getdata['ch_etc_pro'];
+            }
         }
 
-        /**
-         * Validation 라이브러리를 가져옵니다
-         */
         $this->load->library('form_validation');
 
-        /**
-         * 전송된 데이터의 유효성을 체크합니다
-         */
         $config = array(
             array(
                 'field' => 'ch_num',
@@ -179,7 +179,6 @@ class Camp_list extends CB_Controller  // PHP 예약어 'List' 피하기 위해 
         $form_validation = $this->form_validation->run();
 
         if ($form_validation) {
-            // 파일 업로드 처리
             $upload_path = config_item('uploads_dir') . '/camp/';
             if (!is_dir($upload_path)) {
                 mkdir($upload_path, 0707, true);
@@ -187,12 +186,11 @@ class Camp_list extends CB_Controller  // PHP 예약어 'List' 피하기 위해 
 
             $this->load->library('upload');
 
-            // 첨부파일 업로드
             $ch_file = '';
             if (isset($_FILES['ch_file']) && !empty($_FILES['ch_file']['name'])) {
                 $config['upload_path'] = $upload_path;
                 $config['allowed_types'] = '*';
-                $config['max_size'] = '20480'; // 20MB
+                $config['max_size'] = '20480';
                 $config['encrypt_name'] = true;
 
                 $this->upload->initialize($config);
@@ -201,12 +199,11 @@ class Camp_list extends CB_Controller  // PHP 예약어 'List' 피하기 위해 
                 }
             }
 
-            // 시간표 이미지 업로드
             $ch_schedule = '';
             if (isset($_FILES['ch_schedule']) && !empty($_FILES['ch_schedule']['name'])) {
                 $config['upload_path'] = $upload_path;
                 $config['allowed_types'] = 'gif|jpg|png|jpeg';
-                $config['max_size'] = '5120'; // 5MB
+                $config['max_size'] = '5120';
                 $config['encrypt_name'] = true;
 
                 $this->upload->initialize($config);
@@ -214,6 +211,9 @@ class Camp_list extends CB_Controller  // PHP 예약어 'List' 피하기 위해 
                     $ch_schedule = $this->upload->data('file_name');
                 }
             }
+
+            // Editor.js 데이터 처리
+            $ch_etc_pro = $this->input->post('ch_etc_pro', false);
 
             $updatedata = array(
                 'ch_num' => $this->input->post('ch_num', true),
@@ -228,14 +228,13 @@ class Camp_list extends CB_Controller  // PHP 예약어 'List' 피하기 위해 
                 'ch_link' => $this->input->post('ch_link', true),
                 'ch_year' => $this->input->post('ch_year', true),
                 'ch_season' => $this->input->post('ch_season', true),
-                'ch_etc_pro' => $this->input->post('ch_etc_pro', true),
+                'ch_etc_pro' => $ch_etc_pro,
                 'bank_name' => $this->input->post('bank_name', true),
                 'bank_num' => $this->input->post('bank_num', true),
                 'ch_close' => $this->input->post('ch_close') ? '마감' : '접수중',
-                'icon' => $this->input->post('icon', true)  // icon 필드 추가
+                'icon' => $this->input->post('icon', true)
             );
 
-            // 파일이 업로드된 경우에만 updatedata에 추가
             if ($ch_file) {
                 $updatedata['ch_file'] = $ch_file;
             }

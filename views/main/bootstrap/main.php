@@ -4,21 +4,10 @@
 
 <div class="main-slide">
     <div class="item">
-        <div class="main-cover" style="background: url('./assets/images/2026_winter/main_01.jpg') center center/cover; ">
-            <div class="back-drop opacity-50" style="background: linear-gradient(to left, #00dbde, #505cfd);"></div>
-            <h3>2026 겨울 어린이은혜캠프</h3>
-            <h5 class="opacity-75">주제 : 지도자를 꿈꾸라2(I am a warrior)</h5>
-            <div class="mt-3 z-3">
-                <a class="btn btn-lg btn-outline-warning" href="https://www.youtube.com/channel/UC3oaF8OMsCz-fRtA4Hhr4PA" target="_blank">주제가영상</a>
-                <a class="btn btn-lg btn-warning" href="https://www.instagram.com/reel/DM2upADP1uh/?igsh=NXA5amt6cTlrNnZq" target="_blank">기도영상</a>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="main-cover" style="background: url('./assets/images/2026_winter/main_02.jpg') center center/cover">
+        <div class="main-cover" style="background: url('./assets/images/2026_winter/main_01.jpg?1') center center/cover; ">
             <div class="back-drop opacity-50" style="background: linear-gradient(to left, #000, #000);"></div>
             <h3>2026 겨울 어린이은혜캠프</h3>
-            <h5 class="opacity-75">주제 : 지도자를 꿈꾸라2(I am a warrior)</h5>
+            <h5 class="opacity-75">주제 : 지도자를 꿈꾸라2(I AM A WARRIOR)</h5>
             <div class="mt-3 z-3">
                 <?php
                 if (element('list', element('data', $view))) {
@@ -41,42 +30,20 @@
             </div>
         </div>
     </div>
-
-</div>
-
-<!--
-<div class="main-wrap" style="background: url('./assets/images/2026_winter/main_01.jpg') center center/cover">
-    <div class="back-drop"></div>
-
-    <div class="date-information wrap-1280">
-        <div class="box-wrap">
-            <div class="info-tit"><span class="material-symbols-rounded">지역별</span> 어캠 일정</div>
-            <div class="info-text">
-                <ul>
-                    <?php
-                    if (element('list', element('data', $view))) {
-                        foreach (element('list', element('data', $view)) as $result) {
-                            ?>
-                            <li>
-                                <strong><?php echo element('ch_location', $result); ?></strong>
-                                <span>
-                                    <?php
-                                    $start_date = date('Y.m.d', strtotime(element('ch_start', $result)));
-                                    $end_date = date('m.d', strtotime(element('ch_end', $result)));
-                                    echo substr($start_date, 2) . '~' . $end_date;
-                                    ?>
-                                </span>
-                            </li>
-                            <?php
-                        }
-                    }
-                    ?>
-                </ul>
+    <div class="item">
+        <div class="main-cover" style="background: url('./assets/images/2026_winter/main_02.jpg?2') center center/cover">
+            <div class="back-drop opacity-50" style="background: linear-gradient(to left, #000, #000);"></div>
+            <h3>2026 겨울 어린이은혜캠프</h3>
+            <h5 class="opacity-75">주제 : 지도자를 꿈꾸라2(I am a warrior)</h5>
+            <div class="mt-3 z-3">
+                <a class="btn btn-lg btn-outline-warning" href="https://www.youtube.com/channel/UC3oaF8OMsCz-fRtA4Hhr4PA" target="_blank">주제가영상</a>
+                <a class="btn btn-lg btn-warning" href="https://www.instagram.com/reel/DM2upADP1uh/?igsh=NXA5amt6cTlrNnZq" target="_blank">기도영상</a>
             </div>
         </div>
     </div>
 
-</div>-->
+</div>
+
 
 <div class="m-section1">
     <div class="wrap-1600 img-txt-wrap">

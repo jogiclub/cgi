@@ -1,4 +1,10 @@
-<?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css?123'); ?>
+<?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css?123');
+
+$sub = 'subpage subpage-login';
+?>
+
+<h3>로그인</h3>
+
 
 <div class="access col-md-4 offset-md-4">
     <div class="panel panel-default">

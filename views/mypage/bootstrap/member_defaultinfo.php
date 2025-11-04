@@ -1,5 +1,5 @@
 <?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
-
+<h3>회원 기본 정보 입력</h3>
 <div class="mypage">
 	<ul class="nav nav-tabs">
 		<li><a href="<?php echo site_url('mypage'); ?>" title="마이페이지">마이페이지</a></li>
@@ -37,7 +37,7 @@
 		<div class="form-group">
 			<label class="col-lg-3 control-label">회원아이디</label>
 			<div class="col-lg-8"><input type="text" id="mem_userid" name="mem_userid" class="form-control input" minlength="3" />
-				<div class="help-block">영문자, 숫자, _ 만 입력 가능. 최소 3자이상 입력하세요</div>
+				<div class="help-block">영문자, 숫자, _만 입력 가능. 최소 3자이상 입력하세요</div>
 			</div>
 		</div>
 		<div class="form-group">

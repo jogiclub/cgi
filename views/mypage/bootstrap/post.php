@@ -1,5 +1,5 @@
 <?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
-
+<h3>나의 작성글</h4>
 <div class="mypage">
 
     <ul class="nav nav-tabs">
