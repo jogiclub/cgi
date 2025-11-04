@@ -1,0 +1,2226 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded");
+
+html{
+font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
+
+ul, ol{list-style:none;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, table, th, td, form, fieldset, legend, textarea, input, select, textarea, button, article, aside, dialog, footer, header, section, footer, nav, figure, main
+{margin:0; padding:0;word-break: keep-all;}
+a{text-decoration: none;}
+em{font-style: normal;}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body{
+    box-sizing: border-box;
+    color:#343434;
+    letter-spacing: -0.002em;
+}
+
+.gray-100{
+  color:#606060;
+}
+
+.gray-200{
+  color:#eaeaea;
+}
+
+.basic-black{
+  color:#343434;
+}
+
+.white{
+  color:#fff;
+}
+
+.primary-color{
+  color:#F60F8F;
+}
+
+.weight-300{
+  font-weight: 300;
+}
+
+.weight-600{
+  font-weight:600;
+}
+
+.weight-700{
+  font-weight:700;
+}
+
+.weight-800{
+  font-weight:800;
+}
+
+.fs-64{
+  font-size:4rem;
+}
+
+.fs-60{
+  font-size:3.75rem;
+}
+
+.fs-40{
+  font-size:2.5rem;
+}
+
+.fs-30{
+  font-size:1.875rem;
+}
+
+.fs-24{
+  font-size:1.5rem;
+}
+
+.fs-20{
+  font-size:1.25rem;
+}
+
+.fs-18{
+  font-size:1.125rem;
+}
+
+.wrap-1600{
+  width: 84.078%;
+  margin:0 auto;
+}
+
+.wrap-1400{
+  width:73.5688%;
+  margin:0 auto;
+}
+
+.mb-80{margin-bottom:80px;}
+.mb-20{margin-bottom:20px;}
+.mt-30{margin-top:30px;}
+.mt-60{margin-top:60px;}
+
+
+/*공통상단*/
+.sub-visual{
+  width:100%;
+  position:relative;
+}
+
+.sub-visual .bg-box.small{
+  height:600px;
+}
+
+.sub-visual .bg-box{
+  width:100%;
+  position:relative;
+  overflow: hidden;
+}
+
+.sub-wrap .subtop-01 .bg{
+  background: url(../images/sub_img_01.jpg) no-repeat center / cover;
+}
+
+.sub-wrap .subtop-02 .bg{
+  background: url(../images/sub_img_02.jpg) no-repeat center / cover;
+}
+
+.sub-wrap .subtop-03 .bg{
+  background: url(../images/sub_img_03.jpg) no-repeat center / cover;
+}
+
+.sub-wrap .subtop-06 .bg{
+  background: url(../images/sub_img_06.jpg) no-repeat center / cover;
+}
+
+.sub-visual .bg{
+  width:100%;
+  height: 600px;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  animation:subimg-scale 1.6s;
+  transform-origin: center bottom;
+}
+
+
+@keyframes subimg-scale{
+  0%{ transform: scale(1.2);}
+  100%{ transform: scale(1);}
+}
+
+.sub-nav-tit{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sub-visual h2{
+    font-weight: 500;
+    animation:clip-txt 1.6s;
+  }
+  
+  @keyframes clip-txt{
+    0%{clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+    100%{clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);}
+  }
+
+  .sub-visual .sub-nav-tit > * {
+    transition: all 1s;
+    color:#fff;
+    margin-top:12px;
+  }
+  
+.nav-box, .nav-box li{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  animation: trans-txt 1.2s;
+}
+
+.sub-visual .nav-box li.nav-txt:before{
+  content:"";
+  display:block;
+  background:url(../images/navarr_right.png) no-repeat center / 100%;
+  width:24px;
+  height:24px;
+  opacity: 0.8;
+  margin:0 8px;
+}
+
+@keyframes trans-txt{
+  0%{opacity:0; transform:translateY(80px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+
+
+/*왜 어캠일까*/
+.sub-section{
+  margin-top:16.25rem;
+}
+
+.sub-contit{
+  text-align: center;
+  margin-bottom: 7.5rem;
+}
+
+.sub-section h3.top-subtit{
+  margin:0 auto 20px;
+  text-align: center;
+}
+
+
+.sub-contit p:nth-child(2){
+    margin:20px 0 10px 0;
+}
+
+.sub-contit p:nth-child(3){
+    color:#707070;
+}
+
+.sub-contit p.subtit-des{
+  color:#707070;
+}
+
+.half-img-line-wrap{
+    display:flex;
+    flex-direction: column;
+    gap:60px;
+}
+
+.half-img-line{
+    display:flex;
+    align-items: flex-start;
+}
+
+.half-img-line.w-1400{
+  width:100%;
+  justify-content: space-between;
+}
+
+.txt-area.pm-area{
+    width:53.58%;
+    margin-top:60px;
+    padding-left:8%;
+}
+
+.txt-area .num{
+    color:#eaeaea;
+    padding-bottom:10px;
+}
+
+.half-img-line-wrap .half-img-line .con-area{
+  padding:0 40px;
+  }
+
+  .half-img-line:nth-child(5) .txt-area.pm-area p.con-area-des{
+    margin:0;
+  }
+
+.half-img-line-wrap .half-img-line img{
+    width:45%;
+    margin-bottom:60px;
+}
+
+.half-img-line-wrap .half-img-line:last-of-type img{
+  margin:0;
+}
+
+
+.half-img-line-wrap .half-img-line{
+  position:relative;
+}
+.half-img-line-wrap .half-img-line:after{
+  content:'';
+  position:absolute;
+  border-bottom:1px solid #dadada;
+  display: block;
+  width:47%;
+  height:1px;
+  top:100%;
+  right:0;
+}
+
+.half-img-line-wrap .half-img-line:last-of-type:after{
+  border:0;
+  margin:0;
+}
+
+.txt-area p{
+  line-height: 1.4;
+}
+
+.txt-area.pm-area p.con-area-des{
+    padding-top:14px;
+    margin-bottom:60px;
+}
+
+.info-box{
+    background:#F6F3FF;
+    border-radius: 20px;
+    padding:40px;
+}
+
+.info-box.space{
+  margin:40px 40px 60px;
+}
+
+.info-box ul li:nth-child(-n+3), .info-box .info-list{
+    margin-bottom:10px;
+}
+
+.basic-flex{
+  display:flex;
+}
+
+.flex-space {
+  display:flex;
+  justify-content: space-between;
+}
+
+.info-list strong{
+  width:22%;
+}
+
+.info-list p{
+  width:78%;
+}
+
+
+
+/*왜 어캠일까 2번째 섹션:슬라이드*/  
+.acamp-slide .slide-wrap{
+    width:89.5%;
+    margin:0 auto;
+  }
+
+  .con-bak-img{
+    padding:120px 0;
+  }
+
+  .slide-bg-img{
+    background:url(../images/acamp_bakimg.jpg) no-repeat center /cover;
+  }
+
+  .acamp-slide .img-card{
+    display:flex;
+    margin-top:60px;
+  }
+
+  .acamp-slide .img-card img{
+    width:37.5%;
+    /*width: 45.22%;
+    width: 48.766%;*/
+    border-radius: 30px 0 0 30px;
+  }
+
+  .acamp-slide .img-card .con-box{
+   /* width:29.948%;
+    width: 32.299%;*/
+    width: 43.683%;
+    border-radius:0 30px 30px 0;
+    box-sizing: border-box;
+  }
+
+  .acamp-slide li{
+    display:flex;
+    justify-content: center;
+  }
+
+  .sub-center-btit{
+    text-align: center;
+  }
+
+  .sub-center-btit h3{
+    width:68%;
+    margin:0 auto;
+  }
+
+  .slide-bg-img h3+p{
+    margin-top:40px;
+  }
+
+  .slide-bg-img h3+p+p{
+    margin-top:20px;
+    line-height: 1.4;
+  }
+
+  .acamp-slide .con-box{
+    background: #fff;
+    padding:60px;
+    position:relative;
+  }
+  
+  .acamp-slide .con-box p{
+    margin-top:20px;
+    line-height: 1.25;
+  }
+
+  .acamp-slide .con-box .page-sign{
+    position: absolute;
+    right:60px;
+    bottom:60px;
+    font-weight: 600;
+  }
+
+  .acamp-slide .con-box .page-sign span{
+    color:#D8D8D8;
+  }
+
+  .acamp-slide .swiper-pagination{
+    position: static;
+    margin-top:20px;
+  }
+
+  .swiper-button-next:after{
+    content:'';
+    display:block;
+    background:url(../images/arr_right.png) no-repeat center / cover;
+    width:100px;
+    height:200px;
+    opacity:0.65;
+  }
+
+  .swiper-button-prev:after{
+    content:'';
+    display:block;
+    background:url(../images/arr_left.png) no-repeat center / cover;
+    width:100px;
+    height:200px;
+    opacity:0.45;
+  }
+
+  :root {
+    --swiper-navigation-size: 100px;
+}
+  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    color:#fff; 
+  }
+
+  .swiper-pagination-bullet{
+    border:2px solid #fff;
+    background:transparent;
+  }
+
+  .swiper-pagination-bullet-active{
+    width: 22px;
+    height: 10px;
+    border-radius: 20px;
+    background: #F60F8F;
+    border:0;
+    position:relative;
+    top:-1px;
+  }
+
+  .btn-gwrap{text-align: center; margin-top:40px;}
+  .btn-gwrap a{color:#fff; display:inline-block;}
+  .btn-gwrap a:first-child{margin-right:40px;}
+
+  .flower-btn img{
+    vertical-align: middle;
+    padding-left:8px;
+    width: 40px;
+  }
+
+  /*주제해설*/
+  .subject-wrap .con-area .con-tit{
+    margin-bottom:10px;
+  }
+
+  .other-sub-section{
+    margin-top:12.5rem;
+  }
+  .img-row-wrap{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 80px 0;
+  }
+  .img-row-wrap .img-row-list{
+    display:flex;
+    flex-direction: column;
+    /*width: calc(50% - 40px);*/
+    width: 47.143%;
+  }
+  .img-row-wrap .img-row-list img{
+    width:100%;
+  }
+  .img-row-list .txt-area{
+    margin-top:30px;
+  }
+
+  .worship-topic-list {
+    display:flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .worship-topic-list li{
+    border-radius: 20px;
+  }
+
+  .worship-topic-list li.green-bak {
+    background:#DEFFD8;
+  }
+
+  .worship-topic-list li.blue-bak {
+    background:#E4E6FF;
+  }
+
+  .worship-topic-list li.yellow-bak {
+    background:#fffac7;
+  }
+
+  .worship-topic-list li.skyblue-bak {
+    background:#E2F9FF;
+  }
+
+  .worship-topic-list .topic-img-common{
+    width:46.974%;
+    max-width:760px;
+    /*width: 100%;*/
+    height:480px;
+  }
+
+  .worship-topic-list .topic-img01{
+    background:url(../images/topic_img05.jpg) no-repeat center / cover;;
+  }
+
+  .worship-topic-list .topic-img02{
+    background:url(../images/topic_img06.jpg) no-repeat center / cover;
+  }
+
+  .worship-topic-list .topic-img03{
+    background:url(../images/topic_img07.jpg) no-repeat center / cover;
+  }
+
+  .worship-topic-list .topic-img04{
+    background:url(../images/topic_img08.jpg) no-repeat center / cover;
+  }
+
+  .img-wrap{
+    height:620px;
+  }
+  .img-wrap img{
+    width:100%;
+  }
+  .worship-topic-list>li{
+    display:flex;
+  }
+  .worship-topic-list .bible-scripture li{
+    margin-bottom:10px;
+  }
+
+  .worship-topic-list .bible-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:40px 80px;
+    width:52.5%;
+  }
+
+  .bible-area .bible-tit .bible-btit{
+    margin-bottom:30px;
+  }
+
+  .bible-tit p:nth-child(3){
+    margin-top:4px;
+  }
+
+  .bible-tit p:nth-child(3) span{
+    padding-right:10px;
+  }
+
+  .bible-area .bible-scripture{
+    margin-top:20px;
+  }
+
+  .bible-scripture li{
+    display:flex;
+  }
+
+  .bible-scripture li span{
+    padding-right:10px;
+  }
+
+  .black-btn.m-btn{
+    background:#252324;
+    color:#fff;
+    border-radius: 50px;
+    margin-top:2.2rem;
+    display: inline-block;
+}
+
+  .black-btn{
+      padding:1.2rem 1.6rem;
+      text-align: center;
+  }
+
+  .right-area-txt{
+    margin:40px 0 60px 0;
+    float:right;
+    clear:both;
+  }
+
+  .right-area-txt .right-tit{
+    margin-bottom:12px;
+  }
+
+  .right-area-txt .right-tit+p{
+    line-height: 1.4;
+  }
+
+  .topic-bak-img{
+    background:url(../images/topic_img09.jpg) no-repeat center / cover;
+    clear:both;
+  }
+
+  /*즐길거리*/
+  .acamp-table{
+    width:100%;
+    border-collapse: collapse;
+  }
+
+  .acamp-table thead{
+    border-top:1px solid #000;
+  }
+
+  .acamp-table thead tr th{
+    border-right:1px solid #D9D9D9;
+    border-bottom:1px solid #D9D9D9;
+    text-align: center;
+  }
+
+  .acamp-table thead tr th:last-of-type{
+    border-right:0;
+  }
+  .acamp-table thead th{
+    background:#F5F5F7;
+    padding:20px;
+  }
+
+  .acamp-table thead th.th-tit{
+    width:10%;
+  }
+
+  .acamp-table thead th.th-cate{
+    width:25%;
+  }
+
+  .acamp-table thead th.th-cate2{
+    width:40%;
+  }
+
+  .acamp-table thead th.lodging{
+    width:14.3%;
+  }
+
+  .acamp-table tbody tr{
+    border-bottom:1px solid #D9D9D9;
+    text-align: center;
+  }
+
+
+  .acamp-table tbody tr td{
+    border-left:1px solid #D9D9D9;
+
+  }
+
+  .acamp-table.b-pd tbody tr th,
+  .acamp-table.b-pd tbody tr td{
+    padding:30px 20px;
+  }
+
+  .acamp-table.s-pd tbody tr th,
+  .acamp-table.s-pd tbody tr td{
+    padding:20px 10px;
+  }
+
+  .txt-left{
+    text-align: left;
+  }
+
+  ul.choice-bedge li span{
+    font-size:14px;
+    background:#343434;
+    border-radius: 20px;
+    padding: 3px 8px 4px;
+    margin-right: 10px;
+  }
+
+  .choice-bedge li.basic-flex{
+    align-items: center;
+  }
+
+  ul.choice-bedge li:nth-child(2){
+    margin-top:10px;
+  }
+
+  .acamp-table caption{
+    margin:30px 0 20px 0;
+    text-align: left;
+  }
+
+  .intro-activity{
+    margin-top:120px;
+  }
+
+  .intro-activity img{
+    width:100%;
+    max-width:680px;
+    vertical-align: top;
+  }
+
+
+  .intro-activity-txt figcaption{
+    margin-top:10px;
+  }
+
+  .intro-activity-txt figcaption span{
+    padding-right:10px;
+  }
+
+  .time-list span{
+    padding-right:10px;
+  }
+
+
+  /*사후관리*/
+  .con-construction .constr-bg-img{
+    background: url(../images/after_bakimg.jpg) no-repeat center / cover;
+  }
+
+  .con-construction .txt-box-wrap{
+    display:flex;
+    justify-content: space-between;
+    margin-top:100px;
+  }
+
+  .con-construction .txt-box{
+    display:flex;
+    flex-direction: column;
+    background:rgba(255,255,255,0.65);
+    width: calc(33.33% - 10px);
+    padding: 40px 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  .con-construction .txt-box dt{
+    margin-bottom:20px;
+  }
+
+  .con-construction .txt-box dt img{
+    vertical-align: middle;
+  }
+
+  .con-construction .txt-box dt span{
+    padding-right:10px;
+  }
+
+  .con-construction .txt-box dd{
+  line-height: 1.4;
+}
+
+/*캠프준비물*/
+.half-img-line.two-row-list.w-1600 {
+  justify-content: space-between;
+}
+.con-prepare .con-tit{
+  margin-bottom:40px;
+}
+.half-img-line.two-row-list {
+  margin-bottom: 80px;
+}
+.half-img-line.two-row-list img{
+  width:42.5%;
+}
+
+.con-prepare .txt-area .num{
+  padding:0;
+}
+
+.two-row-list .con-area{
+  display:flex;
+  padding:40px 0 0 0;
+  border-top:1px solid #dadada;
+  width: 50%;
+  height:auto;
+  line-height: 1.25;
+}
+
+.two-row-list .con-area p:first-child{
+  padding:0 30px 0 0;
+}
+
+.two-row-list .con-area .tit{
+  width:30%;
+}
+
+.two-row-list .con-area .condes{
+  width:70%;
+  padding:0;
+}
+
+.two-row-list .condes dt.tit{
+  margin-bottom:10px;
+}
+
+.two-row-list .con-area ul.list li:nth-child(n+2),
+.two-row-list .condes dl.list dd:nth-child(n+2){
+  margin-top:8px;
+}
+
+/*.two-row-list .con-area ul.list li:last-child,
+.two-row-list .condes dl.list dd:last-child{
+  margin:0;
+}*/
+
+.con-area .condes.list{
+  line-height:1.4;
+}
+
+.two-row-list .con-area .condes .info-box, .two-row-list .condes .list,
+.con-area .condes ul{
+  margin:20px 0 0 0;
+}
+
+.info-box dt,
+.basic-list li,
+.basic-list dd,
+.info-box .info-tit,
+.contest-list,
+.anw .place-txt-wrap.info-txt{
+  position:relative;
+  padding-left:12px;
+}
+
+.info-box dt:before,
+.basic-list dd:before,
+.basic-list li:before,
+.info-box .info-tit:before,
+.contest-list:before,
+.anw .place-txt-wrap.info-txt:before{
+  content: '';
+  display: block;
+  background: #343434;
+  width: 4px;
+  height: 4px;
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+}
+
+.basic-list dd:before,
+.txt-line .basic-list li:before
+{
+  top:12px;
+}
+
+.fs-18.basic-list li:before,
+.anw .place-txt-wrap.info-txt:before
+{
+  top:8px;}
+
+.info-box dt:before,
+.con-line-txt .basic-list li:before,
+.info-box .info-tit:before,
+.contest-list:before
+{
+  top:10px;
+}
+
+.basic-list .list-tit{
+  margin-top:20px;
+}
+
+
+.two-row-list .con-area .condes .info-box dt:nth-child(3){
+  margin-top:20px;
+}
+
+.two-row-list .con-area .condes .info-box dd{
+  margin-top:4px;
+}
+
+ul.link-list li{
+  border-top:1px solid #dadada;
+  border-bottom:1px solid #dadada;
+}
+
+ul.link-list li{
+  padding:30px 0;
+  margin-bottom:0;
+}
+
+ul.link-list li:nth-child(n+2){
+  border-top:0;
+}
+
+ul.link-list li a, ul.down-list li a{
+  display:block;
+  position:relative;
+}
+
+ul.link-list li a span, ul.down-list li a span{
+  vertical-align: middle;
+  position:absolute;
+  right:0;
+}
+
+ul.down-list li{
+  border-bottom:1px solid #dadada;
+  padding:40px 0;
+}
+
+
+.sub-gray-bak{
+  padding:80px 0;
+  margin-top:80px;
+  background:#FAFAFA;
+}
+
+
+.after-camp-list{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  gap:40px 2%;
+}
+
+.after-camp-list dl{
+  width:47.143%;
+}
+.after-camp-list .txt-line dt{
+  border-bottom:1px solid #dadada;
+  padding-bottom:20px;
+  margin-bottom:20px;
+  position:relative;
+}
+
+.after-camp-list .txt-line dd{
+  padding:0 20px;
+}
+
+.after-camp-list .txt-line dt img{
+ position:absolute;
+ right:10px;
+ bottom:12px;
+}
+
+.after-camp-list .txt-line dt span{
+  padding:0 10px;
+}
+
+.after-camp-list .txt-line ul li {
+  line-height:1.4;
+}
+
+.basic-list li:nth-child(n+2),
+.basic-list dd,
+.basic-list .contest-list:nth-child(n+2){
+  margin-top:8px;
+}
+
+/*몸찬양 경연대회*/
+.contest-bak-img{
+  background:url(../images/contest_img01.jpg) no-repeat center / cover;
+}
+
+.con-contest{
+  margin-top:60px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.con-line-list, .intro-activity-txt{
+  width:48.572%;
+}
+
+.con-line-list li.con-line-txt{
+  border-bottom:1px solid #dadada;
+  padding-bottom:60px;
+}
+
+.con-contest .con-line-list li.con-line-txt:nth-child(n+2){
+  padding-top:60px;
+}
+
+.con-contest .con-line-txt h5{margin-bottom:20px;}
+
+.contest-list strong{
+ padding-right:20px;
+}
+
+.award-list{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap:20px 40px;
+}
+
+.award-list li{
+  display:flex;
+  width: 22.58%;
+}
+
+.award-list li strong {
+  width:50%;
+  padding-right:20px;
+}
+
+.award-list li p{
+  width:50%;
+}
+
+.vedio-list{
+  width: calc(33.33% - 20px);
+  margin-top:40px;
+}
+
+.vedio-list a{
+  display:flex;
+  flex-direction: column;
+  border-bottom:1px solid #dadada;
+}
+
+.vedio-list span{
+  padding:40px 0;
+  position:relative;
+}
+
+.vedio-list span img{
+  width:32px;
+  position:absolute;
+  right:0;
+}
+
+/*예약 및 환불안내*/
+
+.reservation-list {
+  /*gap:120px;*/
+  width:57.143%;
+}
+
+.reservation-list-wrap h4{
+  padding-left:20px;
+}
+.reservation-list-wrap h4.pt-0{
+  padding-top:0;
+}
+.reservation-list dd{
+  line-height: 1.4;
+}
+.small-border{
+  /*padding-bottom:60px;*/
+  padding: 0 40px 60px 40px;
+}
+.reservation-list-wrap, .small-border{
+  border-bottom:1px solid #dadada;
+}
+
+.reservation-list-wrap h4{
+  padding-top:60px;
+}
+
+.small-border.txt-pd-list:first-of-type{
+  padding-top:0;
+}
+
+.txt-pd-list{
+  padding: 60px 40px;
+}
+
+.reservation-list-wrap:last-of-type{
+  border:0;
+}
+
+.reservation-list-wrap:last-of-type dl{
+  padding-bottom:0;
+}
+
+dd.reservation-list-img{
+  padding-left:0;
+  margin-top:20px;
+}
+
+dd.reservation-list-img img{
+  width:100%;
+  max-width:380px;
+}
+
+.reservation-list-img:before{
+  visibility: hidden;
+}
+
+/*장소소개*/
+.intro-place .slide-wrap li img{
+  vertical-align: top;
+  height:620px;
+}
+.intro-place .swiper-pagination{
+  bottom:20px;
+}
+
+.info-place h4{
+  margin-top:60px;
+}
+
+.intro-place .slide-wrap{
+  position:relative;
+}
+
+.info-place li.que.con-line-txt{
+  padding:60px 0;
+}
+
+.info-place-img{
+  margin-top:20px;
+}
+
+.info-place-img figcaption{
+  margin-top:10px;
+}
+
+.anw.con-line-txt img{
+  width:100%;
+  vertical-align: top;
+}
+
+.anw.con-line-txt .basic-list{
+  margin-top:10px;
+}
+
+.anw.con-line-txt .basic-list span{
+  padding-right:20px;
+}
+
+.anw.con-line-txt .info-place-img figcaption span{
+  padding-right:20px;
+}
+
+.info-place-img.map-wrap{
+  margin-top:0;
+}
+
+.map-inner{
+  width:100%;
+  font:normal 400 12px/normal dotum, sans-serif; 
+  color:#333;
+  position:relative;
+}
+
+.map-btn-wrap{
+  overflow: hidden;
+  padding: 12px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 2px 2px;
+  background-color: rgb(249, 249, 249);
+  margin-top: -1px;
+}
+
+.map{
+  border:1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.map-btn-wrap a img.logo-kakaomap{
+  width:72px;
+  height:16px
+}
+
+.map-btn{
+  float:right;
+}
+
+.map-btn a{
+  float: left;
+  position: relative;
+  top: 1px;
+  font-size: 11px;
+  height:15px;
+  padding-top:1px;
+  line-height:15px;
+  color:#000;
+  text-decoration: none;
+}
+
+.bar{
+  float: left;
+  width: 1px;
+  height: 11px;
+  padding: 0;
+  margin: 0 8px 0 9px;
+  vertical-align: top;
+  position: relative;
+  top: 2px;
+  border-left: 1px solid #d0d0d0;
+}
+
+.place-txt-wrap{
+  margin-top:12px;
+}
+
+.place-txt-wrap dt{
+  width:10%;
+  padding-right:10px;
+}
+
+.place-txt-wrap dd{
+  width:90%;
+}
+
+.intro-place .place-list li img{
+  width:100%;
+  object-fit: cover;
+}
+
+
+
+
+.link-box{
+  position:absolute;
+  bottom:0;
+  right:0;
+  z-index: 3;
+  background:rgba(39,39,39,0.8);
+  width:320px;
+ 
+}
+
+.link-box a{
+  display:block;
+  padding:20px;
+}
+
+.link-box a span{
+  vertical-align: middle;
+  position: absolute;
+  right: 20px;
+}
+
+.que{
+position: relative;
+padding: 17px 0;
+cursor: pointer;
+}
+
+
+.anw {
+display: none;
+overflow: hidden;
+padding:30px 0;
+}
+
+.arrow-wrap img{
+  width:80px;
+  vertical-align: top;
+}
+.arrow-wrap {
+position: absolute;
+top:50%; right: 10px;
+transform: translate(0, -50%);
+}
+
+.que .arrow-top {
+display: none;
+}
+.que .arrow-bottom {
+display: block;
+}
+.que.on .arrow-bottom {
+display: none;
+}
+.que.on .arrow-top {
+display: block; 
+}
+
+
+
+/*인사말*/
+.greeting-wrap .flex-space{
+  gap:80px;
+}
+.greeting-txt{
+  width:60%;
+}
+.greeting-txt p{
+  margin-bottom:10px;
+  line-height: 1.4;
+}
+
+.greeting-txt p:last-of-type{
+  margin-bottom:0;
+}
+
+.sign-wrap{
+  margin-top:30px;
+}
+
+.sign-wrap p:first-of-type{
+  margin-bottom:0;
+}
+.greeting-img-wrap{
+  width:40%;
+  margin-bottom:80px;
+}
+
+.greeting-img-wrap img{
+  width:100%;
+}
+
+.greeting-img-wrap img:last-of-type{
+  margin-top:20px;
+}
+
+/*설립목적*/
+.sub-section .purpose-wrap:first-of-type{
+  padding:0 0 80px 0;
+}
+.intro-acamp-tit p{
+  margin-top:20px;
+}
+
+.flex-space.purpose-list{
+  gap:4.285%;
+}
+
+.purpose-img-wrap img{
+  width:100%;
+}
+
+.purpose-wrap{
+ border-bottom:1px solid #dadada;
+ padding:80px 0;
+}
+
+.intro-acamp-tit{
+  margin-bottom:60px;
+}
+
+.other-sub-section.purpose-list{
+  margin-top:80px;
+}
+
+.purpose-wrap .purpose-img-wrap{
+  width:42.857%;
+}
+.purpose-wrap .purpose-txt{
+  width:52.858%;
+}
+.purpose-txt p{
+  line-height: 1.4;
+  margin-bottom:10px;
+}
+
+
+.purpose-txt p:last-of-type{
+  margin-bottom:0;
+}
+
+.purpose-list .con-tit{
+  margin-bottom:30px;
+}
+
+.purpose-list .txt-area .condes{
+  margin-top:10px;
+}
+
+/*비전과개혁*/
+.vision-list .txt-line{
+  border-bottom:1px solid #dadada;
+}
+
+.vision-list{
+  width:55%;
+}
+
+.vision-list .item img{
+  height: 48px;
+  vertical-align: middle;
+}
+
+.vision-list .item{
+  padding:60px 40px;
+}
+
+.vision-list .item:last-of-type{
+  padding:60px 40px 0;
+}
+
+.vision-list .item:first-of-type{
+  padding:0 40px 60px;
+}
+
+
+.vision-list .item dl dd{
+  margin-top:10px;
+  line-height: 1.4;
+}
+
+.vision-list .txt-line span{
+  padding-right:10px;
+}
+
+.vision-list dl{
+  padding-left:30px;
+}
+
+/*핵심가치*/
+.value-wrap .con-tit{
+  width:10%;
+  padding-right:20px;
+}
+
+.value-wrap .con-area-des{
+  width:90%;
+}
+
+
+@media all and (max-width: 1920px) and (min-width:1190px){
+  /*주제해설*/
+    .worship-topic-list .topic-img-common:nth-child(2n+1){
+      border-radius: 20px 0 0 20px;
+    }
+  .worship-topic-list .topic-img-common:nth-child(2n){
+      border-radius: 0 20px 20px 0;
+    }
+}
+
+@media all and (max-width: 1190px) and (min-width:700px){
+  /*주제해설*/
+  .worship-topic-list>li:nth-child(-n+2){
+    margin-bottom:6%;
+  }
+}
+
+@media all and (max-width: 980px) and (min-width:500px){
+  /*주제해설*/
+  .fs-60.ko {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1920px){
+  /*왜 어캠일까*/
+  .sub-center-btit h3{
+      width:70%;
+    }
+
+}
+
+
+@media screen and (max-width: 1440px){
+  .wrap-1400, .wrap-1600{
+    width:100%;
+    padding:0 1rem;
+    box-sizing: border-box;
+ }
+ .sub-section{margin-top:8.75rem;}
+ .other-sub-section{margin-top:8rem;}
+ 
+  /*왜 어캠일까*/
+  .txt-area.pm-area{
+    margin:0;
+  }
+
+  .sub-center-btit h3{
+    width:90%;
+  }
+  .slide-wrap{
+    width:100%;
+    box-sizing: border-box;
+  }
+
+  /*사후관리*/
+  .con-construction .sub-center-btit h3{
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 1280px){
+  /*왜 어캠일까*/
+  .acamp-slide .img-card img {
+    width: 33.334%;
+  }
+  .acamp-slide .img-card .con-box{
+      width: 47.155%;
+      height:370px;
+  }
+
+  /*캠프 준비물*/
+  .two-row-list-wrap{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:60px 0;
+    margin-bottom:60px;
+  }
+  .half-img-line.two-row-list.w-1600{
+    width:47.143%;
+    justify-content: normal;
+    flex-direction: column;
+  }
+
+  .half-img-line.two-row-list img{
+    width:100%;
+  }
+
+  .half-img-line.two-row-list {
+    margin:0;
+}
+
+  .two-row-list .con-area{
+    width:100%;
+    height: auto;
+    min-height: auto;
+    flex-direction: column;
+    border:none;
+  }
+
+  .two-row-list .con-area p:first-child{
+    padding:0;
+  }
+
+  .con-prepare .txt-area:nth-child(n+2){
+    border-top:1px solid #dadada;
+    padding-top:60px;
+  }
+
+  .two-row-list .con-area .tit{width:100%; margin-bottom:20px;}
+  
+  .two-row-list .con-area p{
+  padding:0;
+  }
+  .two-row-list .con-area .condes{width:100%;}
+
+  /*인사말*/
+  .greeting-img-wrap {
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-between;
+    margin-bottom:0;
+  }
+
+  .greeting-img-wrap img{
+    width:48%;
+  }
+  .greeting-wrap .flex-space{
+  flex-direction: column;
+  gap:60px;
+}
+  .greeting-txt{
+    order:2;
+    width:100%;
+  }
+
+  .greeting-img-wrap img:last-of-type {
+    margin-top: 0;
+}
+}
+
+@media screen and (max-width: 1260px){
+  /*즐길거리*/
+  .intro-activity-wrap{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .flex-space.intro-activity{
+    justify-content: flex-start;
+  }
+  .flex-space.intro-activity h4{
+    margin-bottom:20px;
+  }
+
+  .intro-activity{
+    margin-top:80px;
+  }
+
+.half-row-table{
+  min-width: 50%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+
+.flex-space.intro-activity{
+  width: 48%;
+  flex-direction: column;
+}
+
+.intro-activity-txt{
+  width:100%;
+}
+}
+
+@media screen and (max-width: 1190px) {
+  /*왜 어캠일까*/
+  .info-box ul li span{width:100%;}
+  .sub-contit{margin-bottom:4rem;}
+  .acamp-slide li{
+    flex-direction: column;
+    align-items: center;
+  }
+.txt-area.pm-area p.con-area-des{
+  margin-top:0;
+}
+
+.info-box .flex-space{
+  flex-direction: column;
+}
+
+.info-list strong, .info-list p {
+  width: 100%;
+}
+
+.info-list p{
+  margin-top:4px;
+}
+
+  .acamp-slid{width:100%;}
+  .acamp-slide .img-card img,.acamp-slide .img-card .con-box {
+    width:58% ;
+  }
+  .acamp-slide .img-card img{
+    border-radius: 20px 20px 0 0;
+  }
+  .acamp-slide .img-card .con-box{
+    border-radius: 0 0 20px 20px;
+    height: 380px;
+  }
+  .acamp-slide .con-box .page-sign{
+    right:40px;
+    bottom:40px;
+  }
+
+  /*주제해설*/
+  .worship-topic-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+}
+
+
+.worship-topic-list>li {
+  flex-direction: column;
+  width: 47.143%;
+}
+
+
+.worship-topic-list .topic-img-common{
+  width:100%;
+  border-radius: 20px 20px 0 0;
+  height:300px;
+}
+
+.worship-topic-list .bible-area{
+  order:2;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+}
+
+@media screen and (max-width: 980px) {
+  /*왜 어캠일까*/
+  .slide-bg-img h3{
+    width:100%;
+  }
+  .swiper-button-prev:after, .swiper-button-next:after{
+    width:50px;
+    height:100px;
+  }
+
+  /*주제해설*/
+  .img-wrap{
+    height: 420px;
+  }
+
+  /*몸찬양 대회*/
+  .award-list li{
+    width:33%;
+  }
+
+  .contest-vedio.flex-space{
+    flex-wrap:wrap;
+  }
+
+  .vedio-list{
+    width: calc(50% - 20px);
+  }
+
+  /*장소소개*/
+  .intro-place .slide-wrap li img {
+  height: 420px;
+}
+  
+}
+
+@media screen and (max-width: 860px) {
+   /*왜 어캠일까*/
+   .txt-area.pm-area{
+    padding:0;
+   }
+
+  .txt-area.pm-area .num{
+    padding-left:40px;
+  }
+
+.acamp-slide .img-card .con-box{padding:40px;}
+
+/*즐길거리*/
+.activity_wrap{
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+/*사후관리*/
+.con-construction .txt-box-wrap{
+  flex-direction: column;
+  gap: 10px;
+  margin-top:60px;
+}
+
+.con-construction .txt-box{
+  width:100%;
+}
+
+/*비전과개혁*/
+.campaign-wrap .flex-space{
+  flex-direction: column;
+}
+.vision-list {
+  width: 100%;
+}
+.campaign-wrap h3{
+  margin-bottom:60px;
+}
+
+.vision-list .item{
+  padding:60px 20px;
+}
+
+.vision-list .item:first-of-type{
+  padding:0 20px 60px;
+}
+
+.vision-list .item:last-of-type{
+  padding:60px 20px 0;
+}
+}
+
+
+@media screen and (max-width: 700px){
+/*공통상단*/
+  .sub-visual .bg-box.small, .sub-visual .bg {height:400px;}
+  .fs-64{
+    font-size:2.5rem;
+  }  
+  .fs-24{
+    font-size:1.25rem;
+  }
+
+/*왜 어캠일까*/
+.half-img-line.w-1400{
+  flex-direction: column;
+}
+
+.txt-area.pm-area .num{
+  padding-left:20px;
+}
+.txt-area.pm-area{
+  margin:20px auto 0;
+}
+  .txt-area.pm-area{
+    padding-top:12px;
+  }
+  .half-img-line-wrap .half-img-line .con-area{
+    padding:0 20px;
+    height: auto;
+  }
+
+  .half-img-line-wrap .half-img-line img{
+    width:100%;
+    max-width:630px;
+    margin:0 auto;
+  }
+  .txt-area.pm-area{
+  width:100%;
+  max-width:630px;
+  padding:0;
+  margin-top:20px;
+  }
+  .half-img-line-wrap .half-img-line:after{
+    max-width:630px;
+    width:100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .half-img-line-wrap .half-img-line:after{
+    margin:0 0 60px 0;
+    width:100%;
+  }
+
+  .info-box.space{
+    margin: 40px 20px 60px;
+  }
+
+  .con-bak-img{
+    padding:80px 0;
+  }
+
+  .sub-center-btit h3+p{
+    margin-top:20px;
+  }
+ 
+  .acamp-slide .img-card img, .acamp-slide .img-card .con-box{
+    width:100%;
+  }
+  .acamp-slide .swiper-button-next, .acamp-slide .swiper-button-prev{
+    top:calc(50% - 160px);
+  }
+
+  /*주제해설*/
+  .img-row-wrap{
+    flex-direction: column;
+  }
+  .img-row-wrap .img-row-list{
+    width:100%;
+  }
+
+  .img-row-wrap, .worship-topic-list{
+    gap:40px;
+  }
+
+  .worship-topic-list>li{
+    width:100%;
+  }
+
+.right-area-txt{
+  margin:40px 0;
+}
+
+.img-wrap{
+  height:280px;
+}
+
+.black-btn.m-btn{
+  margin-top:1.25rem;
+  padding:1rem;
+  font-size:0.875rem;
+}
+
+/*즐길거리*/
+.flex-space.intro-activity{
+  width:100%;
+}
+
+.intro-activity{
+  margin-top:60px;
+}
+
+/*캠프준비물*/
+.two-row-list .con-area{
+  padding:20px 0 0 0;
+  min-height: auto;
+  margin-bottom:80px;
+}
+.two-row-list-wrap{
+  gap:0;
+  margin:0;
+}
+.half-img-line.two-row-list.w-1600{
+  width:100%;
+}
+
+.other-sub-section.con-prepare{
+  margin-top:2rem;
+}
+
+.other-sub-section.con-video-wrap{
+  margin-top:4rem;
+}
+
+.sub-gray-bak{
+  padding:60px 0;
+  margin-top:60px;
+}
+.after-camp-list dl{width:100%;}
+
+.after-camp-list{
+  flex-direction: column;
+}
+
+/*몸찬양 경연대회*/
+.con-contest {flex-direction: column;}
+.con-line-list{width:100%;}
+.con-line-list li.con-line-txt{
+  padding-top:60px;
+}
+.vedio-list, .vedio-list a{
+  width:100%;
+}
+
+.con-line-list{
+  width:100%;
+}
+
+/*장소소개*/
+.intro-place .slide-wrap li img{
+  height: 310px;
+}
+.link-box {
+  position:static;
+  width: 100%;
+}
+
+.flex-space.info-place{
+  flex-direction: column;
+}
+.info-place li.que.con-line-txt{
+  padding:40px 0;
+}
+li.anw.con-line-txt{
+  padding:30px 0;
+}
+
+.arrow-wrap img{
+  width:70px;
+}
+
+
+/*예약및 환불안내*/
+.fs-40{
+  font-size:2.125rem;
+}
+.reservation-list-wrap.flex-space{
+  flex-direction: column;
+}
+
+.reservation-list-wrap h4{
+  padding-left:0;
+}
+.reservation-list{
+  width:100%;
+}
+
+.small-border.txt-pd-list{
+  padding:60px 0;
+}
+.txt-pd-list{
+  padding:0 0 60px 0;
+}
+.small-border + dl{
+  padding-top:60px;
+}
+
+.reservation-list-wrap h4{
+  padding-bottom:20px;
+}
+
+dd.reservation-list-img img{
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+/*인사말*/
+.greeting-img-wrap{
+  flex-direction: column;
+}
+.intro-acamp-tit {
+  margin-bottom: 40px;
+}
+.greeting-wrap .flex-space{
+  gap:40px;
+}
+
+.greeting-img-wrap img{
+  width:100%;
+}
+
+.greeting-img-wrap img:last-of-type {
+  margin-top: 20px;
+}
+
+/*설립목적*/
+.flex-space.purpose-list{
+  flex-direction: column;
+}
+
+.purpose-txt p:first-of-type{
+  margin-top:30px;
+}
+.sub-section .purpose-wrap:first-of-type {
+  padding: 0 0 60px 0;
+}
+
+.purpose-wrap{
+  padding:60px 0;
+}
+
+.purpose-wrap .purpose-img-wrap, .purpose-wrap .purpose-txt{
+  width:100%;
+}
+
+}
+
+@media screen and (max-width: 630px){
+  br{
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  }
+
+  .other-sub-section.acamp-slide,
+  .other-sub-section.con-construction{
+    margin-top:4rem;
+  }
+
+    /*몸찬양경연대회*/
+    .award-list li {
+      display: flex;
+      width: 40%;
+    }
+}
+
+@media screen and (max-width: 499px){
+  /*왜 어캠일까*/
+  .sub-section h3{width:100%;}
+  .fs-60{font-size:2.5rem}
+  .fs-30{
+    font-size:1.5rem;
+  }
+  .fs-20{
+    font-size:1.125rem;
+  }
+  .fs-18{
+    font-size:1rem;
+  }
+
+  .acamp-slide .img-card .con-box{
+    height: 340px;
+  }
+
+  .info-box ul li{
+    font-size:1rem;
+  }
+
+  .acamp-slide .swiper-button-next, .acamp-slide .swiper-button-prev{
+    top:calc(50% - 160px);
+  }
+
+  .flower-btn img{
+    width:32px;
+  }
+
+  .half-img-line-wrap .half-img-line:last-of-type p.con-area-des{
+    margin-bottom:0;
+  }
+
+  /*주제해설*/
+  .bible-area .bible-tit .bible-btit{
+    margin-bottom:20px;
+  }
+  .bible-area .bible-scripture {
+    margin-top: 12px;
+  }
+
+  /*사후관리*/
+  .con-construction .txt-box dt{
+    margin-bottom:10px;
+  }
+  
+  img.icon-size{
+    width:40px;
+  }
+
+  /*비전과개혁*/
+  .vision-list .item img {
+    height: 40px;
+}
+.vision-list dl{
+  padding-left:20px;
+}
+
+}
+
+
+
+
+
+
+ .slider-container {
+   width: 100%;
+   margin: 0 auto 30px auto;
+ }
+.slider-item {
+  position: relative;
+  cursor: pointer;
+}
+.slider-item img {
+  width: 100%;
+  height: auto;
+}
+.slick-prev, .slick-next {
+  z-index: 10;
+}
+.slick-prev {
+  left: 10px;
+}
+.slick-next {
+  right: 10px;
+}
+.slick-dots {
+  bottom: -30px;
+}
+.slide-caption {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+
+
+ .section-title {
+     color: #007bff;
+     margin-bottom: 30px;
+ }
+
+.history-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+
+}
+
+.year-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+.history-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.history-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    display: flex;
+    align-items: flex-start;
+}
+
+.month-badge {
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.month-badge.empty {
+    background-color: #6c757d;
+}
+
+.history-content {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.history-content strong {
+    color: #007bff;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .year-title {
+        font-size: 2rem;
+    }
+
+    .history-item {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .month-badge {
+        margin-bottom: 10px;
+        margin-right: 0;
+        align-self: flex-start;
+    }
+}

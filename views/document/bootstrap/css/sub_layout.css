@@ -1,0 +1,16 @@
+.subpage-followup .other-sub-section{}
+.subpage-followup .con-construction .constr-bg-img {  width: 100vw;margin-left: 50%;transform: translateX(-50%);}
+.subpage-why .slide-bg-img{width: 100vw;margin-left: 50%;transform: translateX(-50%);}
+.subpage-why .con-box-wrapper{display: flex;justify-content: center;}
+
+.sub-contit .top-subtit{position: initial!important;}
+h3.fs-64{position: initial!important; margin: 30px 0; color: #333!important;}
+
+/*C:\Users\jogic\SynologyDrive\Example\citest\views\_layout\bootstrap\images*/
+.header.subpage{background: url(/views/_layout/bootstrap/images/sub_img_01.jpg) center center / cover;}
+.header.subpage-subject{background: url(/views/_layout/bootstrap/images/sub_img_01.jpg) center center / cover;}
+
+.sub-center-btit .fs-64{color:#fff!important;}
+.swiper-wrap{max-width: 1000px; text-align: center; margin: 30px auto; color:#fff}
+.swiper-wrap .gray-100{color:#ddd}
+.btn-wrap{text-align: center}

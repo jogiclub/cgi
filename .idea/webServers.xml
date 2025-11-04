@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4432d9c2-6864-4a3b-83fe-03c6f83315db" name="webhows.com">
+        <fileTransfer accessType="SFTP" host="115.68.218.42" port="22" sshConfigId="fd9a5d26-5896-4091-b6ab-aff0a093ccde" sshConfig="iwinV">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
