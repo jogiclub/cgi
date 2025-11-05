@@ -128,7 +128,7 @@ class Camp_model extends CB_Model
         $this->db->group_by('ch_location');
         $subquery = $this->db->get_compiled_select();
 
-        $this->db->select('ch_location, ch_start, ch_end');
+        $this->db->select('*');
         $this->db->from($this->_table);
         $this->db->where_in('idx', "($subquery)", false);
         $this->db->order_by('ch_start', 'ASC');

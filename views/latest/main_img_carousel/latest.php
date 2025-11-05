@@ -6,11 +6,15 @@
     .main-img-carousel button.slick-prev{left: 30px; }
     .main-img-carousel button.slick-next{right: 30px; }
     .slick-slide {margin: 0 10px;}
+
+
+
+
 </style>
 
-<?php //echo html_escape(element('board_name', element('board', $view))); ?> <!--제목-->
-<a href="<?php echo board_url(element('brd_key', element('board', $view))); ?>" title="<?php echo html_escape(element('board_name', element('board', $view))); ?>">더보기 <i class="bi bi-angle-right"></i></a>
-
+<div class="d-flex justify-content-end">
+<a href="<?php echo board_url(element('brd_key', element('board', $view))); ?>" title="<?php echo html_escape(element('board_name', element('board', $view))); ?>">더보기 <i class="bi bi-plus-lg"></i></a>
+</div>
 <div class="main-img-carousel">
     <?php
     $i = 0;
@@ -20,7 +24,7 @@
             <div class="card">
                     <a href="<?php echo element('url', $value); ?>" title="<?php echo html_escape(element('title', $value)); ?>">
                         <div class="img" style="background: url(<?php echo element('thumb_url', $value); ?>) center center/cover #eee"></div>
-                        <p class="text-ellipsis-2"><?php echo html_escape(element('title', $value)); ?>
+                        <p class="text-truncate"><?php echo html_escape(element('title', $value)); ?>
                                 <?php if (element('post_comment_count', $value)) { ?> <span class="latest_comment_count"> +<?php echo element('post_comment_count', $value); ?></span><?php } ?>
                         </p>
                     </a>
@@ -41,8 +45,20 @@
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        prevArrow:'<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
-        nextArrow:'<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>'
+        prevArrow:'<button type="button" class="slick-prev"></button>',
+        nextArrow:'<button type="button" class="slick-next"></button>',
+        responsive: [
+            {
+                breakpoint: 1190,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+           },
+
+        ]
     });
 </script>
 

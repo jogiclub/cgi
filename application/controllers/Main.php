@@ -57,6 +57,9 @@ class Main extends CB_Controller
         $forder = 'asc';
         $camp_list = $this->Camp_model->get_camp_list('', '', $where, '', $findex, $forder);
 
+//        print_r($camp_list);
+//        exit;
+
         // camp_list를 board_list와 유사한 구조로 설정
         $modal_camp_list = array();
         if ($camp_list && isset($camp_list['list'])) {

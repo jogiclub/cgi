@@ -126,7 +126,7 @@
                         <h6 class="fw-bold text-primary">첫째, 뉴주일학교 운동 선포</h6>
 
                         <div class="text-center">
-                            <img src="<?php echo base_url('./assets/images/2026_winter/sub_03.jpg'); ?>"
+                            <img src="<?php echo base_url('./assets/images/2026_winter/sub_01.jpg?1'); ?>"
                                  alt="뉴주일학교 운동"
                                  class="img-fluid rounded"
                                  style="max-height: 200px; object-fit: cover;">
@@ -143,7 +143,7 @@
                     <div class="info-section">
                         <h6 class="fw-bold text-success">둘째, 문닫는 주일학교 재건</h6>
                         <div class="text-center">
-                            <img src="<?php echo base_url('./assets/images/2026_winter/sub_02.jpg'); ?>"
+                            <img src="<?php echo base_url('./assets/images/2026_winter/sub_02.jpg?1'); ?>"
                                  alt="주일학교 재건"
                                  class="img-fluid rounded"
                                  style="max-height: 200px; object-fit: cover;">
@@ -161,7 +161,7 @@
                     <div class="info-section">
                         <h6 class="fw-bold text-info">셋째, 한끼 금식기도 비용은 태국어캠 개최</h6>
                         <div class="text-center">
-                            <img src="<?php echo base_url('./assets/images/2026_winter/sub_01.jpg'); ?>"
+                            <img src="<?php echo base_url('./assets/images/2026_winter/sub_03.jpg?1'); ?>"
                                  alt="태국어캠"
                                  class="img-fluid rounded"
                                  style="max-height: 200px; object-fit: cover;">
@@ -178,7 +178,7 @@
             <hr class="my-4">
 
             <div class="thailand-camp-info">
-                <h6 class="fw-bold text-danger mb-3">태국어캠 제2회는 2025년 3월 22일~27일간 진행 됩니다.</h6>
+                <h6 class="fw-bold text-danger mb-3">태국어캠 제2회는 2026년 3월 22일~27일간 진행 됩니다.</h6>
 
                 <div class="contact-info mb-4">
                     <p class="mb-2"><strong>키즈처치리바이벌</strong></p>
@@ -188,13 +188,13 @@
                 <div class="past-event-info bg-light p-3 rounded">
                     <h6 class="fw-bold mb-3">제1회 태국어캠 살펴 보기</h6>
                     <ul class="list-unstyled mb-3">
-                        <li><strong>일시:</strong> 2024년 3월 16일(주일)~21일(금)</li>
+                        <li><strong>일시:</strong> 2025년 3월 16일(주일)~21일(금)</li>
                         <li><strong>장소:</strong> 태국 치앙라이</li>
                     </ul>
 
                     <div class="video-links">
                         <p class="mb-2"><strong>영상 보기</strong></p>
-                        <ul class="list-unstyled d-flex justify-content-start">
+                        <ul class="list-unstyled d-flex flex-column flex-xl-row justify-content-start">
                             <li class="mb-2">
                                 <a href="https://www.youtube.com/shorts/NOVZtZP3VRY" target="_blank" class="btn btn-sm btn-outline-danger">
                                     <i class="fab fa-youtube"></i> 영상워십 공연
@@ -216,7 +216,7 @@
 
                 <div class="alert alert-info mt-3" role="alert">
                     <strong>제2회 태국어캠</strong><br>
-                    일시: 2025년 3월 22일~27일<br>
+                    일시: 2026년 3월 22일~27일<br>
                     동참 문의: 박연훈 목사 <a href="tel:010-2281-8000" class="alert-link">010-2281-8000</a>
                 </div>
             </div>
@@ -381,11 +381,11 @@
         background-color: #f8f9fa;
         padding: 15px;
         border-radius: 5px;
-        border-left: 4px solid #0d6efd;
+
     }
 
     .past-event-info {
-        border-left: 4px solid #ffc107;
+
     }
 </style>
 

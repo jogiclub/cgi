@@ -1,6 +1,6 @@
 <?php // echo html_escape(element('board_name', element('board', $view))); ?>
 <div class="view-all">
-    <a href="<?php echo board_url(element('brd_key', element('board', $view))); ?>" title="<?php echo html_escape(element('board_name', element('board', $view))); ?>">더보기<i class="bi bi-angle-right"></i></a>
+    <a href="<?php echo board_url(element('brd_key', element('board', $view))); ?>" title="<?php echo html_escape(element('board_name', element('board', $view))); ?>">더보기 <i class="bi bi-plus-lg"></i></a>
 </div>
 <?php $i = 0;
 if (element('latest', $view)) {

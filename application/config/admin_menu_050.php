@@ -16,6 +16,6 @@ $config['admin_page_menu']['camp'] =
         '__config' => array('캠프설정', 'bi-calendar4-week'),
         'menu' => array(
             'camp_list?ch_close=N' => array('캠프목록', ''),
-            'apply?&ch_year=2025&ch_season=여름' => array('참가자', ''),
+            'apply?&ch_year=2026&ch_season=겨울' => array('참가자', ''),
         ),
     );

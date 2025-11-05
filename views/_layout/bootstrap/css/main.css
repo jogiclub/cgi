@@ -194,6 +194,7 @@ body{
 .top-txt{
     font-size:4rem;
     font-weight: 600;
+    line-height: 5rem;
 }
 
 .txt-tit{
@@ -213,6 +214,7 @@ body{
 .black-btn.m-btn{
     margin-top:2.2rem;
     text-align: center;
+    font-weight: bold;
 }
 
 .black-btn{
@@ -406,8 +408,6 @@ body{
 }
 
 .primary-color{color:#F60F8F;}
-
-
 
 
 
@@ -698,11 +698,12 @@ p.copy{
         margin-top: 20px;
     }
 
-    .ft-sns-area ul li a{
-        display:block;
-    }
+    .ft-sns-area ul li a{display:block;}
+
 
 }
+
+
 
 @media screen and (max-width: 860px) {
     .info-text ul {
@@ -779,8 +780,10 @@ p.copy{
     }
 
     .m-section4 .titlearea .top-txt{
-        width:66%;
+        width:100%;
         margin:0 auto;
+        line-height: 40px;
+        padding: 0 30px;
     }
 
     .m-section4 .titlearea img{
@@ -952,10 +955,18 @@ p.copy{
 .main-slide .main-cover .back-drop {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);z-index: 3;align-items: center;}
 .main-slide .main-cover .btn{font-size: 20px;font-weight: 500;border-radius: 50px;padding: 15px 30px;letter-spacing: 0;}
 
-.slick-slide{margin: 0!important;}
+.slick-slide{margin: 0 5px!important;}
 .slick-prev{left: 25px!important;}
 .slick-next{right: 25px!important;}
 .slick-prev, .slick-next{z-index: 9}
 .slick-dots{bottom: 15px!important;}
 .slick-dots li{margin: 0!important;}
 .slick-dots li button:before{font-size: 12px!important;}
+@media screen and (max-width: 1190px) {
+    .slick-slide {margin: 0!important;}
+    .main-slide .main-cover h3{font-size: 50px;padding: 0 30px;word-break: keep-all;}
+    .main-slide .main-cover h5{font-size: 30px;margin-top: 30px;width: 100%;text-align: left;padding: 0 30px;}
+    .main-slide .main-cover .cover-text{padding: 0 30px}
+    .main-slide .main-cover .cover-text a{margin-top: 20px}
+    .navbar-toggler-icon{}
+}
